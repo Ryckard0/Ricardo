@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        *{
+            text-decoration: none;
+            color: white;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #191919;
+        }
+
+        p {
+            font-size: 30px;
+        }
+
+        .box {
+            font-size: 20px;
+            color: white;
+            height: 900px;
+            width: 900px;
+            border-radius: 10px;
+            background: #191919;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        .buttons-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 60px;
+            width: 250px;
+        }
+
+        button {
+            height: 50px;
+            width: 90px;
+            background: #191919;
+            color: white;
+            font-weight: 600;
+            border-radius: 5px;
+            border: 2px solid black;
+            
+        }
+        
+        #sim {
+            background-color: green;
+        }
+
+        #nao {
+            background-color: red;
+        }
+    </style>
+    <title>Pedido Irrecusável</title>
+</head>
+<body>
+    <div class="box">
+        <p>Me daria uma oportunidade?</p>
+        <div class="buttons-container">
+            <button id="sim"><a href="/meme_carteira.jpg">Sim</a></button>
+            <button id="nao">Não</button>
+        </div>
+    </div>
+</body>
+<script>
+    let button = document.getElementById('nao');
+    let height = window.innerHeight - 50;
+    let width = window.innerWidth - 50;
+
+    button.addEventListener('mouseover', function () {
+        button.style.position = "absolute"
+        button.style.top = Math.random() * height + "px";
+        button.style.left = Math.random() * width + "px";
+    })
+</script>
+</html>
